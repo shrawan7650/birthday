@@ -1,0 +1,47 @@
+.birthday-message {
+  text-align: center;
+  margin: 20px auto;
+  max-width: 600px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.birthday-message h2 {
+  font-size: 2rem;
+  color: #ff6f61;
+  margin-bottom: 10px;
+}
+
+.birthday-message p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.show-cards-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: white;
+  background: #ff6f61;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.show-cards-button:hover {
+  background: #ff4a3d;
+}
+
+@media (max-width: 768px) {
+  .birthday-message h2 {
+    font-size: 1.5rem;
+  }
+
+  .birthday-message p {
+    font-size: 1rem;
+  }
+}

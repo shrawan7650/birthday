@@ -1,0 +1,116 @@
+/* Common Styles */
+body {
+  font-family: "Arial", sans-serif;
+}
+
+.details-card,
+.cards-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 20px;
+}
+
+.details-card {
+  background: linear-gradient(135deg, #ff758c, #ff7eb3);
+  color: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  max-width: 90%;
+  width: 400px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.details-card h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.details-card p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.toggle-button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #ff4e78;
+  /* background: white; */
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.toggle-button:hover {
+  background: #ff4e78;
+  /* color: white; */
+  /* box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); */
+}
+
+/* Interactive Cards */
+.cards-container {
+  height: auto;
+  max-width: 90%;
+}
+
+.card {
+  background: linear-gradient(135deg, #ff758c, #ff7eb3);
+  color: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+  min-height: 200px;
+  cursor: pointer;
+  transition: transform 0.6s ease-in-out;
+  -webkit-tap-highlight-color: transparent; /* Removes blue highlight */
+  outline: none; /* Removes default outline */
+  user-select: none; /* Prevents accidental text selection */
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card-text {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+.english {
+  font-weight: bold;
+}
+
+.hindi {
+  font-size: 1.1rem;
+  font-style: italic;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .details-card,
+  .card {
+    width: 95%;
+    font-size: 1rem;
+  }
+}

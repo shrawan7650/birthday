@@ -1,0 +1,11 @@
+.balloon {
+  position: absolute;
+  animation: float linear infinite;
+  user-select: none;
+}
+
+@keyframes float {
+  to {
+    transform: translateY(100vh);
+  }
+}

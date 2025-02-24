@@ -1,0 +1,63 @@
+.surprise-button {
+  background: linear-gradient(45deg, #ff4e50, #fc913a);
+  border: none;
+  color: white;
+  padding: 15px 30px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  animation: pulse 1.5s infinite;
+  transition: all 0.3s ease-in-out;
+}
+
+.surprise-button:hover {
+  transform: scale(1.1);
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 10px rgba(255, 78, 80, 0.6);
+  }
+  50% {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(255, 78, 80, 0.8);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 10px rgba(255, 78, 80, 0.6);
+  }
+}
+
+/* Fade-in Effect for Main Content */
+/* h1, .photo-carousel, .cards-container {
+  opacity: 0;
+  animation: fadeIn 2s ease-in-out forwards;
+  animation-delay: 4s;
+} */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .surprise-button {
+    font-size: 1.2rem;
+    padding: 12px 25px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+}
