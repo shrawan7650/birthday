@@ -6,13 +6,14 @@ body {
   background-size: 400% 400%;
   animation: gradientBG 8s infinite;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  overflow-x: hidden;
+  overflow-x: hidden; /* Prevents horizontal scroll */
   text-align: center;
+  padding: 10px;
 }
-
 
 @keyframes gradientBG {
   0% { background-position: 0% 50%; }
@@ -25,28 +26,44 @@ body {
   text-align: center;
   width: 100%;
   max-width: 1200px;
-  padding: 20px;
+  padding: 10px;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-h1 {
-  font-size: 2.5rem;
-  color: #fff;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-  margin-bottom: 20px;
+/* Message Styling */
+.message {
+  font-size: clamp(1.5rem, 5vw, 2.5rem); /* Responsive text size */
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+  margin-top: 50px; /* Proper spacing */
+  max-width: 80%;
+  line-height: 1.5;
+  
 }
 
-/* Button Styles */
+/* Button Styling */
 .button {
-  padding: 15px 15px;
-  font-size: 1.5rem;
+  padding: 15px 20px;
+  font-size: clamp(1rem, 4vw, 1.5rem);
   color: white;
   background: #ff6f61;
   border: none;
   border-radius: 50px;
   cursor: pointer;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease, background 0.3s;
+  min-width: 120px;
+  max-width: 200px;
+  margin-top: 20px;
+}
+
+/* Remove blue focus border */
+.button:focus {
+  outline: none;
+  box-shadow: none;
 }
 
 .button:hover {
@@ -54,38 +71,42 @@ h1 {
   background: #ff4757;
 }
 
+
 /* Confetti, Fireworks, Balloons */
 canvas {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   pointer-events: none;
 }
 
-/* Message Styling */
-.messages {
-  position: absolute;
-  top: 30%;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 2rem;
-  color: white;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
-  z-index: 2;
-}
-
-/* Responsive Design */
+/* Responsive Adjustments */
 @media (max-width: 768px) {
-  h1 {
-    font-size: 2rem;
+  .App {
+    padding: 5px;
   }
+
+  .message {
+    font-size: 1.8rem;
+    margin-top: 30px;
+  }
+
   .button {
     font-size: 1.2rem;
-    padding: 12px 30px;
+    padding: 12px 25px;
   }
-  .messages {
+}
+
+@media (max-width: 480px) {
+  .message {
     font-size: 1.5rem;
+    margin-top: 20px;
+  }
+
+  .button {
+    font-size: 1rem;
+    padding: 10px 20px;
   }
 }
